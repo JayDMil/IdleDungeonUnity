@@ -182,8 +182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Potion Potency:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
-  m_sharedMaterial: {fileID: 3381839549763178463, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -577,6 +577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2e915b580c0e8478925e530cfc75a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Encountered: 0
+  currentThreshold: 10
 --- !u!4 &535329765
 Transform:
   m_ObjectHideFlags: 0
@@ -865,8 +867,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Sword Power: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
-  m_sharedMaterial: {fileID: 3381839549763178463, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -999,8 +1001,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Less time resting means more Gold
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
-  m_sharedMaterial: {fileID: -2232411403261776021, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1293,8 +1295,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You take another step further into the dungeon.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
-  m_sharedMaterial: {fileID: -2232411403261776021, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1429,8 +1431,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
-  m_sharedMaterial: {fileID: 3381839549763178463, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1699,8 +1701,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: A steel heart to travel longer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
-  m_sharedMaterial: {fileID: -2232411403261776021, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1960,6 +1962,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldtext: {fileID: 1483866033}
   Gold: 0
+  MainCamera: {fileID: 556016274}
+  EncounterCamera: {fileID: 1280358965}
+  EncounterManager: {fileID: 0}
+  Clicks: 0
 --- !u!4 &1140673673
 Transform:
   m_ObjectHideFlags: 0
@@ -2169,8 +2175,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Burdens:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
-  m_sharedMaterial: {fileID: 3381839549763178463, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2303,8 +2309,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: A greater sword for a greater pillage
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
-  m_sharedMaterial: {fileID: -2232411403261776021, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2796,8 +2802,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Armor Strength:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
-  m_sharedMaterial: {fileID: 3381839549763178463, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2911,8 +2917,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Gold: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
-  m_sharedMaterial: {fileID: 3381839549763178463, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3064,8 +3070,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: To carry my weight and beyond
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
-  m_sharedMaterial: {fileID: -2232411403261776021, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3273,8 +3279,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Bag Space: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
-  m_sharedMaterial: {fileID: 3381839549763178463, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
