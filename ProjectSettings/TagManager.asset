@@ -50,3 +50,6 @@ TagManager:
   - name: Player
     uniqueID: 753213883
     locked: 0
+  - name: FlavorTextBar
+    uniqueID: 2908488057
+    locked: 0
