@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     
     }
 
-    public void RemoveExp
+    public void RemoveExp(int amount)
     {
         Experience -= amount;
     }
