@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public void AddExp(int amount) 
     {
         Experience += amount;
-        pass
     
     }
 
