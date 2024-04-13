@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EncounterManager : MonoBehaviour
 {
-    const int baseThreshold = 1;
+    const int baseThreshold = 1 ;
 
     private int currentThreshold = baseThreshold;
     public static EncounterManager Instance;
