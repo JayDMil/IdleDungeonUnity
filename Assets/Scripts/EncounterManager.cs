@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EncounterManager : MonoBehaviour
 {
-    const int baseThreshold = 1 ;
+    const int baseThreshold = 1;
 
-    private int currentThreshold = baseThreshold;
+    public bool Encountered;
+    public int currentThreshold = baseThreshold;
     public static EncounterManager Instance;
 
 
@@ -21,10 +22,12 @@ public class EncounterManager : MonoBehaviour
         {
             startEncounter();
             currentThreshold = baseThreshold;
+            Encountered = true;
         }
         else
         {
             currentThreshold += 2;
+            Encountered = false; 
         }
 
     }

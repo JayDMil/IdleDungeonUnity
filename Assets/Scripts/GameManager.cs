@@ -9,6 +9,13 @@ public class GameManager : MonoBehaviour
     public int Gold;
     public static GameManager instance;
 
+    public Camera MainCamera;
+    public Camera EncounterCamera;
+
+    public EncounterManager EncounterManager;
+
+    public int Clicks;
+
     void Awake() {
         instance = this;
     }
@@ -25,6 +32,24 @@ public class GameManager : MonoBehaviour
         Gold -= amount;
     }
     
+    public void ClickAmount(int amount)
+    {
+
+    }
+
+    public void SwitchView()
+    {
+        if (EncounterManager.Encountered == true)
+        {
+            EncounterCamera.enabled = true;
+            MainCamera.enabled = false;
+        }
+        else if (EncounterManager.Encountered == false)
+        {
+            MainCamera.enabled = true;
+            EncounterCamera.enabled = false;
+        }
+    }
 
 
 
