@@ -11,7 +11,7 @@ public class PlayerClick : MonoBehaviour
 
     public void clicked()
     {
-        GameManager.instance.AddGold(goldamount);
+        
         
     }
 
