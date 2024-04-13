@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Player_Click : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public int clickValue;
+    Player_Click GameManager = GetComponent<GameManager>():
+    int value = GameManager.Gold
+
+    public void Click()
     {
-        
+        clickValue++;
+
     }
 }

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int Experience;
+    public int Gold;
     public static GameManager instance;
+    get component 
 
     void Awake() {
         instance = this;
@@ -13,13 +14,13 @@ public class GameManager : MonoBehaviour
 
     public void AddExp(int amount) 
     {
-        Experience += amount;
+        Gold += amount;
     
     }
 
     public void RemoveExp(int amount)
     {
-        Experience -= amount;
+        Gold -= amount;
     }
     
 
