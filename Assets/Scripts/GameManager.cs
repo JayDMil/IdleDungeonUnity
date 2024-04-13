@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public int Experience;
+    public static GameManager instance;
+
+    void Awake() {
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddExp(int amount) 
     {
-        
+        Experience += amount;
+        pass
+    
     }
+
+    public void RemoveExp
+    {
+        Experience -= amount;
+    }
+    
+
+
+
 }
