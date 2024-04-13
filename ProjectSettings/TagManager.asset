@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: FullBack
+    uniqueID: 2798400403
+    locked: 0
+  - name: BackImage
+    uniqueID: 1595722161
+    locked: 0
+  - name: Player
+    uniqueID: 753213883
+    locked: 0
