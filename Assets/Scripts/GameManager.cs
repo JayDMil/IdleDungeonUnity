@@ -6,19 +6,18 @@ public class GameManager : MonoBehaviour
 {
     public int Gold;
     public static GameManager instance;
-    get component 
 
     void Awake() {
         instance = this;
     }
 
-    public void AddExp(int amount) 
+    public void AddGold(int amount) 
     {
         Gold += amount;
     
     }
 
-    public void RemoveExp(int amount)
+    public void RemoveGold(int amount)
     {
         Gold -= amount;
     }
