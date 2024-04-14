@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public void RemoveGold(int amount)
     {
         Gold -= amount;
+        goldtext.text = "Gold: " + Gold.ToString();
     }
     
     public void ClickAmount(int amount)
