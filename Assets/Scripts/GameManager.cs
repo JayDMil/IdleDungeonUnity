@@ -12,12 +12,38 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI goldtext;
     public static GameManager instance;
 
+
+    //sword variables
     public int swordUpgradePrice;
     public int swordLevel;
 
 
     public TextMeshProUGUI swordLevelText;
     public TextMeshProUGUI swordCostText;
+
+    //armor variables
+    public int armorUpgradePrice;
+    public int armorLevel;
+
+
+    public TextMeshProUGUI armorLevelText;
+    public TextMeshProUGUI armorCostText;
+
+    //potion variables
+    public int potionUpgradePrice;
+    public int potionLevel;
+
+
+    public TextMeshProUGUI potionLevelText;
+    public TextMeshProUGUI potionCostText;
+
+    //bag variables
+    public int bagUpgradePrice;
+    public int bagLevel;
+
+
+    public TextMeshProUGUI bagLevelText;
+    public TextMeshProUGUI bagCostText;
 
 
     [SerializeField] Camera MainCamera; 
@@ -88,7 +114,99 @@ public class GameManager : MonoBehaviour
     }
 
 
-    
+    public void ArmorUpgrade(int amount)
+    {
+
+        if (Gold >= armorUpgradePrice)
+        {
+            RemoveGold(armorUpgradePrice);
+            //change the upgrade price
+            armorUpgradePrice *= 2;
+            armorCostText.text = armorUpgradePrice.ToString();
+
+
+            //increase the armor level
+            armorLevel += 1;
+            armorLevelText.text = "Armor Strength: Level " + armorLevel.ToString();
+
+            //Autoclick info 
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+
+
+        }
+        else
+        {
+            Debug.Log("Not enough gold");
+        }
+    }
+
+    public void PotionUpgrade(int amount)
+    {
+
+        if (Gold >= potionUpgradePrice)
+        {
+            RemoveGold(potionUpgradePrice);
+            //change the upgrade price
+            potionUpgradePrice *= 2;
+            potionCostText.text = potionUpgradePrice.ToString();
+
+
+            //increase the armor level
+            potionLevel += 1;
+            potionLevelText.text = "Potion Potency: Level " + potionLevel.ToString();
+
+            //Autoclick info 
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time); 
+
+        }
+        else
+        {
+            Debug.Log("Not enough gold");
+        }
+    }
+
+    public void BagUpgrade(int amount)
+    {
+
+        if (Gold >= bagUpgradePrice)
+        {
+            RemoveGold(bagUpgradePrice);
+            //change the upgrade price
+            bagUpgradePrice *= 2;
+            bagCostText.text = bagUpgradePrice.ToString();
+
+
+            //increase the armor level
+            bagLevel += 1;
+            bagLevelText.text = "Bag Space: Level " + potionLevel.ToString();
+
+            //Autoclick info 
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+            autoclicks.Add(Time.time);
+
+        }
+        else
+        {
+            Debug.Log("Not enough gold");
+        }
+    }
 
 
     public void RemoveGold(int amount)
