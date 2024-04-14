@@ -5,10 +5,10 @@ using System;
 
 public class EncounterManager : MonoBehaviour
 {
-    const int baseThreshold = 1;
+    const float baseThreshold = 1;
 
     public bool Encountered;
-    public int currentThreshold = baseThreshold;
+    public float currentThreshold = baseThreshold;
     public static EncounterManager Instance;
 
     public event Action OnEncountered;
@@ -20,7 +20,7 @@ public class EncounterManager : MonoBehaviour
 
     public void SpinEncounter()
     {
-        int chance = UnityEngine.Random.Range(0, 100);
+        int chance = UnityEngine.Random.Range(0, 101);
         if (chance < currentThreshold)
         {
             
@@ -29,7 +29,7 @@ public class EncounterManager : MonoBehaviour
         }
         else
         {
-            currentThreshold += 2;
+            currentThreshold += 1;
         }
 
     }
