@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public EncounterManager encounterManager;
 
     public int GoldPerClick = 1;
+    public int Gold;
+
+    public int UpgradePrice;
 
     void Awake() {
         instance = this;
@@ -21,16 +24,29 @@ public class GameManager : MonoBehaviour
 
     public void AddGold(int amount) 
     {
-        GoldPerClick += amount;
-        goldtext.text = "Gold: " + GoldPerClick.ToString();    
+        Gold += amount;
+        goldtext.text = "Gold: " + Gold.ToString();    
         
     
     }
 
+    public void SwordUpgrade(int amount)
+    {
+        UpgradePrice = 5;
+        if (Gold >= UpgradePrice)
+        {
+            UpgradePrice = UpgradePrice * 2;
+        }
+        else
+        {
+            Debug.Log("Not enough gold");
+        }
+    }
+
     public void RemoveGold(int amount)
     {
-        GoldPerClick -= amount;
-        goldtext.text = "Gold: " + GoldPerClick.ToString();
+        Gold -= amount;
+        goldtext.text = "Gold: " + Gold.ToString();
     }
     
 
