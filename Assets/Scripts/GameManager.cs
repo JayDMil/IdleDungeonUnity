@@ -6,7 +6,6 @@ using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviour
 {
-
     public List <float> autoclicks = new List<float>();
 
     public TextMeshProUGUI goldtext;
@@ -47,6 +46,7 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField] Camera MainCamera; 
+    [SerializeField] Camera EncounterCamera;
     public GameObject QuitButton;
 
 
@@ -56,6 +56,9 @@ public class GameManager : MonoBehaviour
     public int Gold;
 
     public int UpgradePrice;
+
+    public List <GameObject> EncounterList;
+
 
     void Awake() {
         instance = this;
@@ -226,12 +229,16 @@ public class GameManager : MonoBehaviour
     {
         MainCamera.gameObject.SetActive(false);
         QuitButton.gameObject.SetActive(false);
-
+        EncounterList = new List<GameObject>(Resources.LoadAll<GameObject>("Targets"));
+        int randomPrefab = Random.Range(0, EncounterList.Count - 1);
+        Instantiate(EncounterList[randomPrefab], new Vector3(-21, 0, 0), Quaternion.identity, encounterManager.transform);
+        
     }
 
     public void LeaveEncounter()
     {
         MainCamera.gameObject.SetActive(true);
+        EncounterCamera.gameObject.SetActive(false);
         QuitButton.gameObject.SetActive(true);
     }
 

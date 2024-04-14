@@ -4,17 +4,18 @@ using UnityEngine;
 using System;
 
 public class EncounterManager : MonoBehaviour
-{
-    const float baseThreshold = 1;
+{    const float baseThreshold = 1;
     public float currentThreshold = baseThreshold;
     public static EncounterManager Instance;
 
     public event Action OnEncountered;
 
 
+
     void Awake(){
         Instance = this;
     }
+
 
     public void SpinEncounter()
     {
