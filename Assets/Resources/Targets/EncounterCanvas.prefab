@@ -940,8 +940,9 @@ GameObject:
   - component: {fileID: 1330486642843800965}
   - component: {fileID: 4565433604239312435}
   - component: {fileID: 447736848793887860}
+  - component: {fileID: 7168294800269264965}
   m_Layer: 0
-  m_Name: EncounterCanvas1
+  m_Name: EncounterCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1032,6 +1033,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7168294800269264965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212265221879249877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ac54f18e20dd34e981141e1d8af450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7382658992712617019
 PrefabInstance:
   m_ObjectHideFlags: 0

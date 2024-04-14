@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI goldtext;
     public static GameManager instance;
 
-
     //sword variables
     public int swordUpgradePrice;
     public int swordLevel;
@@ -80,6 +79,11 @@ public class GameManager : MonoBehaviour
                 autoclicks[i] = Time.time;
                 AddGold(1);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            MainCamera.gameObject.SetActive(true);
         }
     }
 
@@ -238,7 +242,6 @@ public class GameManager : MonoBehaviour
     public void LeaveEncounter()
     {
         MainCamera.gameObject.SetActive(true);
-        EncounterCamera.gameObject.SetActive(false);
         QuitButton.gameObject.SetActive(true);
     }
 
