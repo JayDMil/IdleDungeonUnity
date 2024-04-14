@@ -808,7 +808,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2621,19 +2621,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldtext: {fileID: 1483866033}
-  swordLevelText: {fileID: 583478647}
-  swordCostText: {fileID: 2057739165}
   swordUpgradePrice: 5
   swordLevel: 0
-  armorLevelText: {fileID: 0}
-  armorUpgradePrice: 100
-  armorLevel: 0
-  potionLevelText: {fileID: 0}
-  potionUpgradePrice: 1000
-  potionLevel: 0
-  bagLevelText: {fileID: 0}
-  bagUpgradePrice: 5
-  bagLevel: 0
+  swordLevelText: {fileID: 583478647}
+  swordCostText: {fileID: 2057739165}
   MainCamera: {fileID: 556016274}
   QuitButton: {fileID: 860543935}
   encounterManager: {fileID: 535329764}

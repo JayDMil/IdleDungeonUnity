@@ -9,6 +9,14 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI goldtext;
     public static GameManager instance;
 
+    public int swordUpgradePrice;
+    public int swordLevel;
+
+
+    public TextMeshProUGUI swordLevelText;
+    public TextMeshProUGUI swordCostText;
+
+
     [SerializeField] Camera MainCamera; 
     public GameObject QuitButton;
 
@@ -37,10 +45,11 @@ public class GameManager : MonoBehaviour
         
         if (Gold >= swordUpgradePrice)
         {
-            RemoveGold(amount);
+            RemoveGold(swordUpgradePrice);
             //change the upgrade price
-            swordUpgradePrice = swordUpgradePrice * 2;
+            swordUpgradePrice *= 2;
             swordCostText.text = swordUpgradePrice.ToString();
+            
 
             //increase the sword level
             swordLevel += 1;
