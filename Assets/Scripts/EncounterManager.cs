@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EncounterManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class EncounterManager : MonoBehaviour
     public int currentThreshold = baseThreshold;
     public static EncounterManager Instance;
 
+    public event Action OnEncountered;
+
 
     void Awake(){
         Instance = this;
@@ -17,25 +20,18 @@ public class EncounterManager : MonoBehaviour
 
     public void SpinEncounter()
     {
-        int chance = Random.Range(0, 100);
+        int chance = UnityEngine.Random.Range(0, 100);
         if (chance < currentThreshold)
         {
             
-            startEncounter();
+            OnEncountered();
             currentThreshold = baseThreshold;
         }
         else
         {
             currentThreshold += 2;
-            Encountered = false;
         }
 
     }
-
-    public void startEncounter()
-    {
-        Debug.Log("Random Encounter Begin");
-        Encountered = true;
-        
-    }
 }
+  

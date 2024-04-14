@@ -1962,9 +1962,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldtext: {fileID: 1483866033}
   Gold: 0
-  camera1: {fileID: 556016271}
-  camera2: {fileID: 1280358964}
-  EncounterManager: {fileID: 535329764}
+  MainCamera: {fileID: 556016274}
+  encounterManager: {fileID: 535329764}
   Clicks: 0
 --- !u!4 &1140673673
 Transform:

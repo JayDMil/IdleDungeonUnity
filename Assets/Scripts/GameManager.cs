@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     public int Gold;
     public static GameManager instance;
 
-    public GameObject camera1;
-    public GameObject camera2;
+    [SerializeField] Camera MainCamera;
 
-    public EncounterManager EncounterManager;
+
+    public EncounterManager encounterManager;
 
     public int Clicks;
 
@@ -37,21 +37,18 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void SwitchView()
+    private void Start()
     {
-        if (EncounterManager.Encountered == true)
-        {
-            camera1.SetActive(false);
-            camera2.SetActive(true);
-            
-        }
-        else if (EncounterManager.Encountered == false)
-        {
-            camera2.SetActive(false);
-            camera1.SetActive(true);
-            
-        }
+        encounterManager.OnEncountered += StartEncounter;
+        
     }
+
+    void StartEncounter()
+    {
+        MainCamera.gameObject.SetActive(false);     
+    }
+
+
 
 
 
