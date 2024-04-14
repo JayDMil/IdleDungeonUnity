@@ -6,6 +6,9 @@ using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviour
 {
+
+    public List <float> autoclicks = new List<float>();
+
     public TextMeshProUGUI goldtext;
     public static GameManager instance;
 
@@ -39,12 +42,29 @@ public class GameManager : MonoBehaviour
         
     
     }
+    public void Update()
+    {
+        for (int i = 0; i < autoclicks.Count; i++)
+        {
+            if (Time.time - autoclicks[i] >= 1.0f)
+            {
+                autoclicks[i] = Time.time;
+                AddGold(1);
+            }
+        }
+    }
+
+
+
 
     public void SwordUpgrade(int amount)
     {
         
         if (Gold >= swordUpgradePrice)
         {
+
+
+
             RemoveGold(swordUpgradePrice);
             //change the upgrade price
             swordUpgradePrice *= 2;
@@ -55,8 +75,10 @@ public class GameManager : MonoBehaviour
             swordLevel += 1;
             swordLevelText.text = "Sword Power: Level " + swordLevel.ToString();
 
-            //autoclicker now...
+            //Autoclick info 
+            autoclicks.Add(Time.time);
 
+    
 
         }
         else
@@ -64,6 +86,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("Not enough gold");
         }
     }
+
+
+    
+
 
     public void RemoveGold(int amount)
     {
