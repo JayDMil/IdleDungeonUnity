@@ -6,7 +6,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI goldtext;
-    public int Gold;
     public static GameManager instance;
 
     [SerializeField] Camera MainCamera;
@@ -14,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public EncounterManager encounterManager;
 
-    public int Clicks;
+    public int GoldPerClick = 1;
 
     void Awake() {
         instance = this;
@@ -22,21 +21,18 @@ public class GameManager : MonoBehaviour
 
     public void AddGold(int amount) 
     {
-        Gold += amount;
-        goldtext.text = "Gold: " + Gold.ToString();    
+        GoldPerClick += amount;
+        goldtext.text = "Gold: " + GoldPerClick.ToString();    
+        
     
     }
 
     public void RemoveGold(int amount)
     {
-        Gold -= amount;
-        goldtext.text = "Gold: " + Gold.ToString();
+        GoldPerClick -= amount;
+        goldtext.text = "Gold: " + GoldPerClick.ToString();
     }
     
-    public void ClickAmount(int amount)
-    {
-
-    }
 
     private void Start()
     {
@@ -54,6 +50,8 @@ public class GameManager : MonoBehaviour
     {
         MainCamera.gameObject.SetActive(true);
     }
+
+
 
 
 

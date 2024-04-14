@@ -6,8 +6,6 @@ using System;
 public class EncounterManager : MonoBehaviour
 {
     const float baseThreshold = 1;
-
-    public bool Encountered;
     public float currentThreshold = baseThreshold;
     public static EncounterManager Instance;
 
@@ -20,7 +18,7 @@ public class EncounterManager : MonoBehaviour
 
     public void SpinEncounter()
     {
-        int chance = UnityEngine.Random.Range(0, 101);
+        int chance = UnityEngine.Random.Range(0, 10001);
         if (chance < currentThreshold)
         {
             
@@ -31,7 +29,6 @@ public class EncounterManager : MonoBehaviour
         {
             currentThreshold += 1;
         }
-
     }
 }
   
