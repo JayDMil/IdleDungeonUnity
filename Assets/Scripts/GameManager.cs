@@ -45,7 +45,8 @@ public class GameManager : MonoBehaviour
 
     void StartEncounter()
     {
-        MainCamera.gameObject.SetActive(false);     
+        MainCamera.gameObject.SetActive(false);
+             
     }
 
 
