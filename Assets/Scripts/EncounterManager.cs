@@ -23,12 +23,11 @@ public class EncounterManager : MonoBehaviour
             
             startEncounter();
             currentThreshold = baseThreshold;
-            Encountered = true;
         }
         else
         {
             currentThreshold += 2;
-            Encountered = false; 
+            Encountered = false;
         }
 
     }
@@ -36,6 +35,7 @@ public class EncounterManager : MonoBehaviour
     public void startEncounter()
     {
         Debug.Log("Random Encounter Begin");
+        Encountered = true;
         
     }
 }
