@@ -644,8 +644,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Accept this burden?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
-  m_sharedMaterial: {fileID: -2232411403261776021, guid: 9acbb8565bbeab744a348002aadce157, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -914,8 +914,8 @@ MonoBehaviour:
 
     Here be your burden?'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
-  m_sharedMaterial: {fileID: 3381839549763178463, guid: db5d5e4aadcb4ac4fb88e47cb34cbd5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2635,6 +2635,7 @@ MonoBehaviour:
   bagUpgradePrice: 5
   bagLevel: 0
   MainCamera: {fileID: 556016274}
+  QuitButton: {fileID: 860543935}
   encounterManager: {fileID: 535329764}
   GoldPerClick: 0
   Gold: 0

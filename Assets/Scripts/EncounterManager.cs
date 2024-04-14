@@ -18,7 +18,7 @@ public class EncounterManager : MonoBehaviour
 
     public void SpinEncounter()
     {
-        int chance = UnityEngine.Random.Range(0, 10001);
+        int chance = UnityEngine.Random.Range(0, 1001);
         if (chance < currentThreshold)
         {
             
