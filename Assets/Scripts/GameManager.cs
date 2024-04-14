@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     public int Gold;
     public static GameManager instance;
 
-    public Camera MainCamera;
-    public Camera EncounterCamera;
+    public GameObject camera1;
+    public GameObject camera2;
 
     public EncounterManager EncounterManager;
 
@@ -37,25 +37,19 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void Start()
-    {
-        MainCamera.enabled = true;
-        EncounterCamera.enabled = false;
-    }
-
-
     public void SwitchView()
     {
         if (EncounterManager.Encountered == true)
         {
-            EncounterCamera.enabled = true;
-            MainCamera.enabled = false;
+            camera1.SetActive(false);
+            camera2.SetActive(true);
             
         }
         else if (EncounterManager.Encountered == false)
         {
-            MainCamera.enabled = true;
-            EncounterCamera.enabled = false;
+            camera2.SetActive(false);
+            camera1.SetActive(true);
+            
         }
     }
 
