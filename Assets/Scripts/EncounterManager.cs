@@ -20,6 +20,7 @@ public class EncounterManager : MonoBehaviour
         int chance = Random.Range(0, 100);
         if (chance < currentThreshold)
         {
+            
             startEncounter();
             currentThreshold = baseThreshold;
             Encountered = true;
@@ -35,5 +36,6 @@ public class EncounterManager : MonoBehaviour
     public void startEncounter()
     {
         Debug.Log("Random Encounter Begin");
+        
     }
 }

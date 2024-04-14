@@ -592,7 +592,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1280358968}
   - {fileID: 463255116}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1962,9 +1961,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldtext: {fileID: 1483866033}
   Gold: 0
-  MainCamera: {fileID: 556016274}
-  EncounterCamera: {fileID: 1280358965}
-  EncounterManager: {fileID: 0}
+  Camera1: {fileID: 556016274}
+  Camera2: {fileID: 1280358965}
+  EncounterManager: {fileID: 535329764}
   Clicks: 0
 --- !u!4 &1140673673
 Transform:
@@ -2401,7 +2400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &1280358965
 Camera:
   m_ObjectHideFlags: 0
@@ -2409,7 +2408,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280358964}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -2505,12 +2504,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280358964}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -44.91902, y: 0.011998948, z: 13.530904}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 535329765}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1313363815
 GameObject:
@@ -3959,6 +3958,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 248571299}
   - {fileID: 556016275}
+  - {fileID: 1280358968}
   - {fileID: 535329765}
   - {fileID: 1950934190}
   - {fileID: 1140673673}

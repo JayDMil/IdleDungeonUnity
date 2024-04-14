@@ -37,12 +37,20 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void Start()
+    {
+        MainCamera.enabled = true;
+        EncounterCamera.enabled = false;
+    }
+
+
     public void SwitchView()
     {
         if (EncounterManager.Encountered == true)
         {
             EncounterCamera.enabled = true;
             MainCamera.enabled = false;
+            
         }
         else if (EncounterManager.Encountered == false)
         {
