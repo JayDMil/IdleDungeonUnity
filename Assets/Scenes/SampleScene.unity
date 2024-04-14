@@ -390,7 +390,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10000
+  m_text: '10,000
 
 '
   m_isRightToLeft: 0
@@ -573,9 +573,9 @@ RectTransform:
   - {fileID: 1669029178}
   - {fileID: 1483866035}
   - {fileID: 299215985}
-  - {fileID: 1851979064}
   - {fileID: 444743058}
   - {fileID: 2005388873}
+  - {fileID: 1851979064}
   - {fileID: 860543936}
   - {fileID: 1379340354}
   m_Father: {fileID: 0}
@@ -803,12 +803,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1140673672}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RemoveGold
+        m_MethodName: SwordUpgrade
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1116,7 +1116,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 100
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1429,7 +1429,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556016271}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &556016274
 Camera:
   m_ObjectHideFlags: 0
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1000
+  m_text: 1,000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2621,9 +2621,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldtext: {fileID: 1483866033}
+  swordLevelText: {fileID: 583478647}
+  swordCostText: {fileID: 2057739165}
+  swordUpgradePrice: 5
+  swordLevel: 0
+  armorLevelText: {fileID: 0}
+  armorUpgradePrice: 100
+  armorLevel: 0
+  potionLevelText: {fileID: 0}
+  potionUpgradePrice: 1000
+  potionLevel: 0
+  bagLevelText: {fileID: 0}
+  bagUpgradePrice: 5
+  bagLevel: 0
   MainCamera: {fileID: 556016274}
   encounterManager: {fileID: 535329764}
   GoldPerClick: 0
+  Gold: 0
+  UpgradePrice: 0
 --- !u!4 &1140673673
 Transform:
   m_ObjectHideFlags: 0
@@ -3375,7 +3390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1586733694
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4561,7 +4576,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 1000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
